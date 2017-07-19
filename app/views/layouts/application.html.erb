@@ -3,14 +3,23 @@
 <head>
   <title>OmnicalcParams</title>
   <%= csrf_meta_tags %>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+
 </head>
 
 <body>
   <div class="container">
-    <%= yield %>
+          <h1><a href="/flexible/square/<%= rand(1-10) %>">Flexible Square Example</a></h1>
+          <h1><a href="/flexible/square_root/<%= rand(1-10) %>">Flexible Square Root Example</a></h1>
+          <h1><a href="/flexible/payment/410/30/250000">Flexible Payment Example</a></h1>
+          <h1><a href="/flexible/random/<%= rand (1-90) %>/<%= rand(99-200)%>">Flexible Random Example</a></h1>
+          <h1><a href="/square/new/">Square Form</a></h1>
+          <h1><a href="/square_root/new/">Square Root Form</a></h1>
+          <h1><a href="/payment/new/">Payment Form</a></h1>
+          <h1><a href="/random/new/">Random Form</a></h1>
+    <%= yield  %>
   </div>
 
   <div class="rails-toolbar">
