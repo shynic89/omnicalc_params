@@ -3,7 +3,7 @@
 <h1>Payment Results</h1>
 
 <h4>APR</h4>
-<p><%= number_to_percentage(@rate *100* 12) %></p>
+<p><%= @mrate * 12 %></p>
 <h4>Number of years</h4>
 <p><%=  @months / 12 %></p>
 <h4>Principal</h4>
