@@ -56,7 +56,7 @@ class CalculationsController < ApplicationController
   
   def process_payment
       
-      @rate = params["apr"].to_f / 100 / 12.round(2)
+      @rate = params["apr"].to_f / 100 / 12
       @months = params["years"].to_i * 12
       @pv = params["principal"].to_i
       @multiply = (1 + @rate)**(-@months)
