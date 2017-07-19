@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get("payment/results",{ :controller=> "calculations", :action =>"process_payment"})
   get("random/new",{ :controller=> "calculations", :action =>"random_form"})
   get("random/results",{ :controller=> "calculations", :action =>"process_random"})
+  get("wordcount/new",{ :controller=> "calculations", :action =>"wordcount_form"})
 
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

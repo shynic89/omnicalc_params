@@ -56,7 +56,7 @@ class CalculationsController < ApplicationController
   
   def process_payment
       
-      @rate = params["rate"].to_f / 100 / 12
+      @rate = params["apr"].to_f / 100 / 12.round(2)
       @months = params["years"].to_i * 12
       @pv = params["principal"].to_i
       @multiply = (1 + @rate)**(-@months)
@@ -76,6 +76,11 @@ class CalculationsController < ApplicationController
       @random = rand(@min...@max)
       render("calculations/random_results_template.html.erb")
   end
+  
+  def wordcount_form
+      render("calculations/wordcount_form_template.html.erb")
+  end
+  
   
 end
     
