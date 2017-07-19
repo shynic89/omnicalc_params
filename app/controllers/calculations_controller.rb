@@ -14,6 +14,7 @@ class CalculationsController < ApplicationController
       def flex_payment
       
       @rate = params["basis_points"].to_f / 10000 / 12
+      @apr = @rate * 100 * 12
       @months = params["number_of_years"].to_i * 12
       @pv = params["present_value"].to_i
       @multiply = (1 + @rate)**(-@months)
